@@ -2,6 +2,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://yandex.ru/nexus/content/repositories/public/' }
     }
 }
 

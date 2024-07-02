@@ -5,10 +5,18 @@ import '../../../utils/constants/text_strings.dart';
 import '../../../utils/helpers/helper_functions.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key, required this.image, required this.title, required this.subTitle, required this.onPressed});
+  const SuccessScreen({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.subTitle,
+    required this.onPressed,
+    required this.playSound,
+  });
 
   final String image, title, subTitle;
   final VoidCallback onPressed;
+  final VoidCallback playSound;
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +38,14 @@ class SuccessScreen extends StatelessWidget {
 
               /// Buttons
               SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(onPressed: onPressed, child: const Text(TTexts.tContinue))
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    playSound();
+                    onPressed();
+                  },
+                  child: const Text(TTexts.tContinue),
+                ),
               ),
             ],
           ),

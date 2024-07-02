@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../utils/constants/sizes.dart';
-import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -22,9 +20,9 @@ class OnBoardingPage extends StatelessWidget {
             height: THelperFunctions.screenHeight() * 0.6,
             image: AssetImage(image),
           ),
-          Text(TTexts.onBoardingTitle1, style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
+          Text(title, style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
           const SizedBox(height: TSizes.spaceBtwItems),
-          Text(title, style: Theme.of(context).textTheme.bodyMedium, textAlign: TextAlign.center),
+          Text(subTitle, style: Theme.of(context).textTheme.bodyMedium, textAlign: TextAlign.center),
         ],
       ),
     );

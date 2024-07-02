@@ -32,7 +32,17 @@ class TImages {
   static const String kenwoodLogo = "assets/icons/brands/kenwood-logo.png";
   static const String hermanMillerLogo = "assets/icons/brands/herman-miller-logo.png";
   static const String ikeaLogo = "assets/icons/brands/ikea_logo.png";
-  static const String acerlogo = "assets/icons/brands/acer_logo.png";
+  static const String acerLogo = "assets/icons/brands/acer_logo.png";
+
+  // -- Flag Icons
+  static const String russiaFlag = "assets/icons/flags/russia.png";
+  static const String belarusFlag = "assets/icons/flags/belarus.png";
+  static const String kazakhstanFlag = "assets/icons/flags/kazakhstan.png";
+  static const String kyrgyzstanFlag = "assets/icons/flags/kyrgyzstan.png";
+  static const String armeniaFlag = "assets/icons/flags/armenia.png";
+  static const String uzbekistanFlag = "assets/icons/flags/uzbekistan.png";
+  static const String usaFlag = "assets/icons/flags/usa.png";
+  static const String spainFlag = "assets/icons/flags/spain.png";
 
   // -- Animations
   static const String productsIllustration = "assets/images/animations/sammy-line-workout.gif";
@@ -42,10 +52,35 @@ class TImages {
   static const String deliveredEmailIllustration = "assets/images/animations/sammy-line-man-receives-a-mail.png";
   static const String verifyIllustration = "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
 
+  // -- Lottie Animations
+  static String cartAnimation = "assets/images/animations/lady-adding-product-in-cart-animation.json";
+  static String orderCompletedAnimation = "assets/images/animations/order-complete-car-delivery-animation.json";
+  static String packageAnimation = "assets/images/animations/98783-packaging-in-progress.json";
+  static String paperPlaneAnimation = "assets/images/animations/110052-paper-plane.json";
+  static String carAnimation = "assets/images/animations/136491-animation-lottie-car-rides.json";
+  static String pencilAnimation = "assets/images/animations/140429-pencil-drawing.json";
+  static String doerAnimation = "assets/images/animations/141594-animation-of-doer.json";
+  static String searchAnimation = "assets/images/animations/72785-searching.json";
+  static String emptyAnimation = "assets/images/animations/72785-searching.json";
+  static String securityAnimation = "assets/images/animations/67263-security-icon-transparent.json";
+  static String successfullyRegisterAnimation = "assets/images/animations/72462-check-register.json";
+  static String thankYouAnimation = "assets/images/animations/104368-thank-you.json";
+  static String paymentSuccessfulAnimation= "assets/images/animations/120978-payment-successful.json";
+  static String loadingJuggleAnimation = "assets/images/animations/141397-loading-juggle.json";
+  static String cloudUploadingAnimation = "assets/images/animations/cloud-uploading-animation.json";
+  static String loaderAnimation = "assets/images/animations/loader-animation.json";
+  static String pickUpPointAnimation = "assets/images/animations/pick_up_point_animation.json";
+  static String loginAnimation = "assets/images/animations/login-animation.json";
+  static String orderPickupPointAnimation = "assets/images/animations/order_pickup_point_animation.json";
+  static String placemarkAnimation = "assets/images/animations/placemark_animation.json";
+  static String favoriteAnimation = "assets/images/animations/favorite_animation.json";
+  static String orderAnimation = "assets/images/animations/order_animation.json";
+
   // -- OnBoarding Texts
   static const String onBoardingImage1 = "assets/images/on_boarding_images/sammy-line-searching.gif";
   static const String onBoardingImage2 = "assets/images/on_boarding_images/sammy-line-shopping.gif";
   static const String onBoardingImage3 = "assets/images/on_boarding_images/sammy-line-delivery.gif";
+  static const String noInternetConnection = "assets/images/on_boarding_images/sammy-line-no-connection.gif";
 
   // -- Products
   static const String productImage1 = "assets/images/products/nike-shoes.png";
@@ -54,10 +89,10 @@ class TImages {
   static const String productImage4 = "assets/images/products/product-jeans.png";
   static const String productImage5 = "assets/images/products/product-shirt.png";
   static const String productImage6 = "assets/images/products/product-slippers.png";
-  static const String productImage7 = "assets/images/products/NikeAirJOrdonBlackRed.png";
-  static const String productImage8 = "assets/images/products/NikeAirJOrdonOrange.png";
+  static const String productImage7 = "assets/images/products/NikeAirJordonBlackRed.png";
+  static const String productImage8 = "assets/images/products/NikeAirJordonOrange.png";
   static const String productImage9 = "assets/images/products/NikeAirJordonwhiteMagenta.png";
-  static const String productImage10 = "assets/images/products/NikeAirJOrdonWhiteRed.png";
+  static const String productImage10 = "assets/images/products/NikeAirJordonWhiteRed.png";
   static const String productImage11 = "assets/images/products/samsung_s9_mobile.png";
   static const String productImage12 = "assets/images/products/samsung_s9_mobile_withback.png";
   static const String productImage13 = "assets/images/products/samsung_s9_mobile_back.png";
@@ -74,7 +109,7 @@ class TImages {
   static const String productImage24 = "assets/images/products/tracksuit_black.png";
   static const String productImage25 = "assets/images/products/tracksuit_blue.png";
   static const String productImage26 = "assets/images/products/tracksuit_red.png";
-  static const String productImage27 = "assets/images/products/trcksuit_parrotgreen.png";
+  static const String productImage27 = "assets/images/products/tracksuit_parrotgreen.png";
   static const String productImage28 = "assets/images/products/Adidas_Football.png";
   static const String productImage29 = "assets/images/products/baseball_bat.png";
   static const String productImage30 = "assets/images/products/cricket_bat.png";
@@ -131,7 +166,7 @@ class TImages {
   static const String userProfileImage2 = "assets/images/reviews/review_profile_image_2.jpeg";
   static const String userProfileImage3 = "assets/images/reviews/review_profile_image_3.jpeg";
 
-  //Banners
+  // -- Banners
   static const String promoBanner1 = "assets/images/products/promo-banner-1.png";
   static const String promoBanner2 = "assets/images/products/promo-banner-2.png";
   static const String promoBanner3 = "assets/images/products/promo-banner-3.png";
@@ -144,8 +179,10 @@ class TImages {
   static const String banner7 = "assets/images/banners/banner_7.jpg";
   static const String banner8 = "assets/images/banners/banner_8.jpg";
 
-  //Profile
+  // -- Profile
   static const String user = "assets/images/content/user.png";
+  static const String smartphone = "assets/images/content/desktop.png";
+  static const String desktop = "assets/images/content/smartphone.png";
 
   // -- Payment Methods
   static const String applePay = "assets/icons/payment_methods/apple-pay.png";
@@ -157,5 +194,12 @@ class TImages {
   static const String paystack = "assets/icons/payment_methods/paystack.png";
   static const String paytm = "assets/icons/payment_methods/paytm.png";
   static const String successfulPaymentIcon = "assets/icons/payment_methods/successful_payment_icon.png";
-}
+  static const String mirCard = "assets/icons/payment_methods/mir.png";
+  static const String sbp = "assets/icons/payment_methods/sbp.png";
+  static const String tinkoff = "assets/icons/payment_methods/tinkoff.png";
 
+  // -- Other Icons
+  static const String courier = "assets/icons/other/courier.png";
+  static const String deliveryLocation = "assets/icons/other/delivery_location.png";
+  static const String placemark = "assets/icons/other/placemark.png";
+}

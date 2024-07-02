@@ -1,5 +1,15 @@
 
 class TValidator {
+  /// Empty Text Validation
+  static String? validateEmptyText(String? fieldName, String? value) {
+    if (value == null || value.isEmpty) {
+      return '$fieldName is required';
+    }
+
+    return null;
+  }
+
+  /// Email Validation
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email is required.';
@@ -15,6 +25,7 @@ class TValidator {
     return null;
   }
 
+  /// Password Validation
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
       return 'Password is required.';
@@ -43,6 +54,27 @@ class TValidator {
     return null;
   }
 
+  /// Password Confirm Validation
+  static String? validatePasswordConfirm(String? value, String? password) {
+    if (value == null || value.isEmpty) {
+      return 'Password confirmation is required.';
+    }
+
+    if (value != password) {
+      return 'Passwords do not match.';
+    }
+
+    return null;
+  }
+
+  /// Combined Password Validation for Confirm Field
+  static String? combinedPasswordConfirmValidator(String? value, String? password) {
+    String? validationResult = validatePassword(value);
+    if (validationResult != null) return validationResult;
+    return validatePasswordConfirm(value, password);
+  }
+
+  /// Phone Number Confirm Validation
   static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
       return 'Phone number is required.';

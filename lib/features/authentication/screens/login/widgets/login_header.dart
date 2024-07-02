@@ -1,8 +1,8 @@
 import 'package:easyshoppin_eshop/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import '../../../../../generated/l10n/l10n.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
-import '../../../../../utils/constants/text_strings.dart';
 
 class TLoginHeader extends StatelessWidget {
   const TLoginHeader({
@@ -20,9 +20,9 @@ class TLoginHeader extends StatelessWidget {
           image: AssetImage(dark ? TImages.lightAppLogo : TImages.darkAppLogo),
         ),
         const SizedBox(height: TSizes.xl),
-        Text(TTexts.loginTitle, style: Theme.of(context).textTheme.headlineMedium),
+        Text(S.of(context).loginTitle, style: Theme.of(context).textTheme.headlineMedium),
         const SizedBox(height: TSizes.sm),
-        Text(TTexts.loginSubTitle, style: Theme.of(context).textTheme.bodyMedium),
+        Text(S.of(context).loginSubTitle, style: Theme.of(context).textTheme.bodyMedium),
       ],
     );
   }

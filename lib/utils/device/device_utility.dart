@@ -11,8 +11,8 @@ class TDeviceUtils {
   }
 
   static Future<void> setStatusBarColor(Color color) async {
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(statusBarColor: color),
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: color),
     );
   }
 
@@ -109,7 +109,4 @@ class TDeviceUtils {
       throw 'Could not launch $url';
     }
   }
-
-
-// Add more device utility methods as per your specific requirements.
 }

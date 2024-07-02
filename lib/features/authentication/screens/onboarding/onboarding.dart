@@ -6,7 +6,7 @@ import 'package:easyshoppin_eshop/features/authentication/screens/onboarding/wid
 import 'package:easyshoppin_eshop/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../utils/constants/text_strings.dart';
+import '../../../../generated/l10n/l10n.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -22,21 +22,21 @@ class OnBoardingScreen extends StatelessWidget {
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,
-            children: const [
+            children: [
               OnBoardingPage(
                 image: TImages.onBoardingImage1,
-                title: TTexts.onBoardingTitle1,
-                subTitle: TTexts.onBoardingSubTitle1,
+                title: S.of(context).onBoardingTitle1,
+                subTitle: S.of(context).onBoardingSubTitle1,
               ),
               OnBoardingPage(
                 image: TImages.onBoardingImage2,
-                title: TTexts.onBoardingTitle2,
-                subTitle: TTexts.onBoardingSubTitle2,
+                title: S.of(context).onBoardingTitle2,
+                subTitle: S.of(context).onBoardingSubTitle2,
               ),
               OnBoardingPage(
                 image: TImages.onBoardingImage3,
-                title: TTexts.onBoardingTitle3,
-                subTitle: TTexts.onBoardingSubTitle3,
+                title: S.of(context).onBoardingTitle3,
+                subTitle: S.of(context).onBoardingSubTitle3,
               ),
             ],
           ),
@@ -54,7 +54,3 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
