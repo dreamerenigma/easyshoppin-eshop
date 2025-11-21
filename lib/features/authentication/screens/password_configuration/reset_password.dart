@@ -1,0 +1,68 @@
+import 'package:easyshoppin_eshop/features/authentication/controllers/forget_password/forget_password_controller.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../../../../utils/constants/app_images.dart';
+import '../../../../utils/constants/app_sizes.dart';
+import '../../../../utils/constants/text_strings.dart';
+import '../../../../utils/helpers/helper_functions.dart';
+import 'package:audioplayers/audioplayers.dart';
+import '../login/login_screen.dart';
+
+class ResetPasswordScreen extends StatelessWidget {
+  const ResetPasswordScreen({super.key, required this.email});
+
+  final String email;
+
+  @override
+  Widget build(BuildContext context) {
+    final audioPlayer = AudioPlayer();
+
+    Future<void> playButtonClickSound() async {
+      await audioPlayer.play(AssetSource('sounds/click_button.mp3'));
+    }
+    return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: [IconButton(onPressed: () => Get.back(), icon: const Icon(CupertinoIcons.clear))],
+      ),
+      body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(TSizes.defaultSpace),
+            child: Column(
+              children: [
+                /// Image
+                Image(image: const AssetImage(TImages.deliveredEmailIllustration), width: THelperFunctions.screenWidth() * 0.6),
+                const SizedBox(height: TSizes.spaceBtwSections),
+
+                /// Email, Title & SubTitle
+                Text(email, style: Theme.of(context).textTheme.bodyMedium, textAlign: TextAlign.center),
+                const SizedBox(height: TSizes.spaceBtwItems),
+                Text(TTexts.changeYourPasswordTitle, style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center),
+                const SizedBox(height: TSizes.spaceBtwItems),
+                Text(TTexts.changeYourPasswordSubTitle, style: Theme.of(context).textTheme.labelMedium, textAlign: TextAlign.center),
+                const SizedBox(height: TSizes.spaceBtwSections),
+
+                /// Buttons
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () async {
+                      await playButtonClickSound(); // Play the click sound
+                      Get.offAll(() => const LoginScreen());
+                    },
+                    child: const Text(TTexts.done),
+                  ),
+                ),
+                const SizedBox(height: TSizes.spaceBtwItems),
+                SizedBox(
+                    width: double.infinity,
+                    child: TextButton(onPressed: () => ForgetPasswordController.instance.resendPasswordResetEmail(email), child: const Text(TTexts.resendEmail))
+                ),
+              ],
+            ),
+          )
+      ),
+    );
+  }
+}

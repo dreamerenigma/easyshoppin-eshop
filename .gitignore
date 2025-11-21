@@ -1,0 +1,86 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# Windows
+*.dill
+*.bin
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Firebase
+firebase.json
+lib/firebase_options.dart
+
+# iOS
+ios/Runner/GoogleService-Info.plist
+ios/Config.xcconfig
+
+# Android
+android/app/google-services.json
+
+# Web
+/web/.dart_tool/
+/web/build/
+android/app/.cxx/
+
+# Windows
+windows/plugins/
+windows/CMakeFiles/
+windows/extracted/
+windows/include/
+windows/packages/
+windows/_deps/
+
+# Other
+.env
+lib/config.dart
+access_firebase_token.dart
+
+*.lock
+*.hprof
+
+firebase_cpp_sdk_windows_*.zip
+ChatifySetup.exe
+*.zip
+*.exe

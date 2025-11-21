@@ -1,0 +1,37 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url 'https://yandex.ru/nexus/content/repositories/public/'
+        }
+    }
+
+    subprojects {
+        afterEvaluate { project ->
+            if (project.hasProperty('android')) {
+                project.android {
+                    if (namespace == null) {
+                        namespace project.group
+                    }
+                }
+            }
+        }
+        tasks.withType(JavaCompile).configureEach {
+            sourceCompatibility = "17"
+            targetCompatibility = "17"
+        }
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+//subprojects {
+//    project.evaluationDependsOn(":app")
+//}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

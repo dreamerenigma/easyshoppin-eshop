@@ -1,0 +1,8 @@
+targets:
+  $default:
+    builders:
+      build_config|generate_for_file:
+        options:
+          config: "local.properties"
+        generate_for:
+          - lib/generated/version.dart
